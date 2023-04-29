@@ -1,0 +1,6 @@
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[requires]
+pylene/head@lrde/unstable
