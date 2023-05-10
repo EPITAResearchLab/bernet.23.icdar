@@ -44,9 +44,9 @@ Use respecting the order the following notebooks:
 -  [benchmark_score.py](benchmark_notebook/benchmark_score.py): to score the benchmark
 -  [benchmark_visualize.py](benchmark_notebook/benchmark_visualize.py): to output the graphs
 
-## Sandbox
+## Demo
 
-The notebook [sandbox.ipynb](sandbox.ipynb) contains some code to test the line detectors. You can add your own image in the image folder. **Image must be 8b-grayscale.**
+The notebook [demo/demo.ipynb](demo/demo.ipynb) contains some code to test the line detectors. You can add your own image in the `demo/image` folder. **Image must be 8b-grayscale.**
 
 # Citation
 
@@ -55,3 +55,5 @@ If you use or found this code, evaluation, and/or dataset, please cite:
 ```
 FIXME
 ```
+
+TODO add link to arXiv version of the paper.
