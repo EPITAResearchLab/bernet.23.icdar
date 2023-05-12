@@ -33,7 +33,7 @@ make -j
 
 ## Download datasets
 
-FIXME: Dataset link
+Datasets are available here : [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7927611.svg)](https://doi.org/10.5281/zenodo.7927611)
 
 **Set the path in the file [lsd_path_dataset.py](lsd_path_dataset.py)**
 
