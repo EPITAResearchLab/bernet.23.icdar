@@ -1,7 +1,42 @@
 # bernet.23.icdar
 Experimental protocol and results for the paper "Linear Object Detection in Document Images using Multiple Object Tracking" accepted at ICDAR 2023 by Bernet et al.
 
-FIXME: Add illustration
+---
+
+## Example of possible applications
+
+<div style="text-align: center;">
+    <img src="example_image/directory.png" alt="Image 1" style="display:inline-block; width:30%;">
+    <img src="example_image/directory_labeled.png" alt="Image 2" style="display:inline-block; width:30%;">
+    <img src="example_image/directory2.png" alt="Image 2" style="display:inline-block; width:30%;">
+    <figcaption>Old directory (croped):
+
+        (Left) Original
+        (Center) Vectorial line detection
+        (Right) Rotation
+</div>
+
+<div style="text-align: center;">
+    <img src="example_image/staff_lines.png" alt="Image 1" style="display:inline-block; width:40%;">
+    <img src="example_image/staff_lines_labeled.png" alt="Image 2" style="display:inline-block; width:40%;">
+    <figcaption>Staff line:
+
+        (Left) Original
+        (Right) Staff lines line detection
+</div>
+
+<div style="text-align: center;">
+    <img src="example_image/map.png" alt="Image 1" style="display:inline-block; width:30%;">
+    <img src="example_image/map_labeled.png" alt="Image 2" style="display:inline-block; width:30%;">
+    <img src="example_image/map2.png" alt="Image 2" style="display:inline-block; width:30%;">
+    <figcaption>Old map (croped):
+
+        (Left) Original
+        (Center) Line detection
+        (Right) Removed geographical lines
+</div>
+
+---
 
 ## Requirements
 
