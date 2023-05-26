@@ -1,40 +1,27 @@
 # bernet.23.icdar
-Experimental protocol and results for the paper "Linear Object Detection in Document Images using Multiple Object Tracking" accepted at ICDAR 2023 by Bernet et al.
+Experimental protocol and results for the paper "Linear Object Detection in Document Images using Multiple Object Tracking" [accepted at ICDAR 2023](https://icdar2023.org/program/accepted-papers/) by Bernet et al.
 
 ---
 
-## Example of possible applications
+## Examples of possible applications
 
-<div style="text-align: center;">
-    <img src="example_image/directory.png" alt="Image 1" style="display:inline-block; width:30%;">
-    <img src="example_image/directory_labeled.png" alt="Image 2" style="display:inline-block; width:30%;">
-    <img src="example_image/directory2.png" alt="Image 2" style="display:inline-block; width:30%;">
-    <figcaption>Old directory (croped):
+Old directory (cropped):
+| Original | Vectorial line detection | Rotation |
+|-----|------|-------|
+|![Original](example_image/directory.png) | ![Vectorial line detection](example_image/directory_labeled.png) | ![Rotation](example_image/directory2.png) |
 
-        (Left) Original
-        (Center) Vectorial line detection
-        (Right) Rotation
-</div>
+Staff lines:
+| Original | Staff lines line detection |
+|-----|-------------|
+|![Original](example_image/staff_lines.png) | ![Staff lines line detection](example_image/staff_lines_labeled.png) |
 
-<div style="text-align: center;">
-    <img src="example_image/staff_lines.png" alt="Image 1" style="display:inline-block; width:40%;">
-    <img src="example_image/staff_lines_labeled.png" alt="Image 2" style="display:inline-block; width:40%;">
-    <figcaption>Staff line:
 
-        (Left) Original
-        (Right) Staff lines line detection
-</div>
 
-<div style="text-align: center;">
-    <img src="example_image/map.png" alt="Image 1" style="display:inline-block; width:30%;">
-    <img src="example_image/map_labeled.png" alt="Image 2" style="display:inline-block; width:30%;">
-    <img src="example_image/map2.png" alt="Image 2" style="display:inline-block; width:30%;">
-    <figcaption>Old map (croped):
+Old map (cropped):
+| Original | Line detection | Removed geographical lines |
+|-----|------|-------|
+|![Original](example_image/map.png) | ![Line detection](example_image/map_labeled.png) | ![Removed geographical lines](example_image/map2.png) |
 
-        (Left) Original
-        (Center) Line detection
-        (Right) Removed geographical lines
-</div>
 
 ---
 
@@ -88,7 +75,16 @@ The notebook [demo/demo.ipynb](demo/demo.ipynb) contains some code to test the l
 If you use or found this code, evaluation, and/or dataset, please cite:
 
 ```
-FIXME
+@InProceedings{bernet.23.icdar,
+  author    = {Philippe Bernet and Joseph Chazalon and Edwin Carlinet and Alexandre Bourquelot and Elodie Puybareau},
+  title     = {Linear Object Detection in Document Images using Multiple Object Tracking},
+  booktitle = {Proceedings of the 17th International Conference on Document Analysis and Recognition},
+  year      = {2023},
+  address   = {San José, California, USA},
+  month     = {08},
+  publisher = {Springer},
+  note      = {To appear.},
+}
 ```
 
 TODO add link to arXiv version of the paper.
