@@ -34,6 +34,7 @@ from line_detection_evaluation.pixel.icdar_2013.evaluate_staff_line import icdar
 from line_detection_evaluation.pixel.icdar_2011.evaluate_staff_line import icdar_2011_evaluate_pixel
 from line_detection_evaluation.pixel.coco.eval_coco import eval_coco_path, eval_coco_path_score
 
+from pylena.scribo import LSuperposition, VSegment
 
 from typing import List, Tuple
 
@@ -342,7 +343,7 @@ def get_inputs_widget() -> widgets.Dropdown:
     return multiple_choice_widget(inp, "input")
 
 
-def tune():
+def line_detector_sandbox():
     """
     Tune the parameters of the multiple binaries linear object detector: Pylene, LSD, Hough, Canny, Cannyline, Edline, Elsed
     Binaries should posses a opencv CLI interface with the --help option.
@@ -544,3 +545,69 @@ def tune():
     display(widgets.Box(children=[
             w_choice, w_inputs, w_mv_pixel_remove_line, w_mv_vector_angle, w_save_vector]))
     display(w_output)
+
+
+def display_vector(img_in: np.ndarray, vsegments: List[VSegment], on_image: bool) -> None:
+    """
+    Display the image with the vectorial output
+    :param img_in: The input image
+    :param img_label:  The pixel label mqp
+    :param on_image (Optional, default: False): If the display should only be on the input image or not
+    """
+    img_rgb = np.ones(
+        (img_in.shape[0], img_in.shape[1], 3), dtype=np.uint8) * 255
+
+    if on_image:
+        img_rgb[:, :, 0] = img_in
+        img_rgb[:, :, 1] = img_in
+        img_rgb[:, :, 2] = img_in
+
+    colors = np.random.randint(
+        low=0, high=255, size=(len(vsegments), 3)).tolist()
+
+    for vsegment_index, vsegment in enumerate(vsegments):
+        color = tuple(colors[vsegment_index])
+        cv2.line(img_rgb, (vsegment.x0, vsegment.y0),
+                 (vsegment.x1, vsegment.y1), color)
+
+    plt.imshow(img_rgb)
+
+    plt.xticks([])
+    plt.yticks([])
+    plt.show()
+
+
+def display_pixel(img_label: np.ndarray, img_in: np.ndarray = None, superposition_only: bool = False) -> None:
+    """
+    Display the image with the pixel output
+    :param img_label:  The pixel label mqp
+    :param img_in (Optional, default: None): The input image
+    :param superposition_only (Optional, default: False): If the display should only be the superpositions
+    """
+    img_rgb = np.ones(
+        (img_label.shape[0], img_label.shape[1], 3), dtype=np.uint8) * 255
+
+    if img_in is not None:
+        img_rgb[:, :, 0] = img_in
+        img_rgb[:, :, 1] = img_in
+        img_rgb[:, :, 2] = img_in
+
+    red = np.array([255, 0, 0])
+    img_rgb[img_label == 1, 0] = red[0]
+    img_rgb[img_label == 1, 1] = red[1]
+    img_rgb[img_label == 1, 2] = red[2]
+
+    if not superposition_only:
+        np.random.seed(0)
+        max_label = np.max(img_label)
+        color = np.random.randint(low=0, high=255, size=(max_label - 2, 3))
+        for i in range(2, max_label):
+            img_rgb[img_label == i, 0] = color[i - 2, 0]
+            img_rgb[img_label == i, 1] = color[i - 2, 1]
+            img_rgb[img_label == i, 2] = color[i - 2, 2]
+
+    plt.imshow(img_rgb)
+
+    plt.xticks([])
+    plt.yticks([])
+    plt.show()
