@@ -1,8 +1,10 @@
 # bernet.23.icdar
 Experimental protocol and results for the paper "Linear Object Detection in Document Images using Multiple Object Tracking" [accepted at ICDAR 2023](https://icdar2023.org/program/accepted-papers/) by Bernet et al.
 
-The complete article is available here : [https://arxiv.org/abs/2305.16968](https://arxiv.org/abs/2305.16968)
+📝 The complete article is available here : [https://arxiv.org/abs/2305.16968](https://arxiv.org/abs/2305.16968)
 
+🆕 Live demo on HF available at <https://huggingface.co/spaces/Sefray/PylenaLineDetector_ICDAR2023>
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-lg.svg)](https://huggingface.co/spaces/Sefray/PylenaLineDetector_ICDAR2023)
 ---
 
 # Scribo Line Detector
