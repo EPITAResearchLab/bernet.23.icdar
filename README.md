@@ -1,10 +1,15 @@
 # bernet.23.icdar
-Experimental protocol and results for the paper "Linear Object Detection in Document Images using Multiple Object Tracking" [accepted at ICDAR 2023](https://icdar2023.org/program/accepted-papers/) by Bernet et al.
+Experimental protocol and results for the paper "Linear Object Detection in Document Images using Multiple Object Tracking" [accepted at ICDAR 2023](https://icdar2023.org/program/accepted-papers/) by [Bernet](https://github.com/Sefray) et al.
 
-📝 The complete article is available here : [https://arxiv.org/abs/2305.16968](https://arxiv.org/abs/2305.16968)
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-lg.svg)](https://huggingface.co/spaces/Sefray/PylenaLineDetector_ICDAR2023) [![Dataset](https://zenodo.org/badge/DOI/10.5281/zenodo.7927611.svg)](https://doi.org/10.5281/zenodo.7927611) [![Paper](./img/badge_paper.svg)](https://arxiv.org/abs/2305.16968) [![Python package](./img/badge_pylena.svg)](https://pypi.org/project/pylena/)
 
-🆕 Live demo on HF available at <https://huggingface.co/spaces/Sefray/PylenaLineDetector_ICDAR2023>
-[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-lg.svg)](https://huggingface.co/spaces/Sefray/PylenaLineDetector_ICDAR2023)
+## ✨ Resources
+| [📝 Paper](https://arxiv.org/abs/2305.16968) | [🖼️ Poster](./poster/poster_hd.pdf)  | [🎥 Teaser](./poster/teaser_video.mp4) | [👀 Online Demo](https://huggingface.co/spaces/Sefray/PylenaLineDetector_ICDAR2023) |
+|---|---|---|---|
+| [![Paper](./img/illustration_paper.png)](https://arxiv.org/abs/2305.16968) | [![Poster](./img/illustration_poster.png)](./poster/poster_hd.pdf) | [![Teaser](./img/illustration_teaser.png)](./poster/teaser_video.mp4) | [![Demo](./img/illustration_demo.png)](https://huggingface.co/spaces/Sefray/PylenaLineDetector_ICDAR2023) |
+
+
+
 ---
 
 # Scribo Line Detector
